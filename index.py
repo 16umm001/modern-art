@@ -1,0 +1,40 @@
+from turtle import *
+from random import *
+def randomcolour():
+  red = randint(0,255)
+  green = randint(0,255)
+  blue = randint(0,255)
+  color(red,green,blue)
+def randomplace():
+  penup()
+  x = randint(-150,150)
+  y = randint(-150,150)
+  goto(x,y)
+  pendown()
+shape('turtle')
+for i in range (10):
+  speed(12)
+  randomcolour()
+  randomplace()
+  stamp()
+def drawrectangle():
+  speed(12)
+  randomcolour()
+  randomplace()
+  hideturtle()
+  length=randint(10,100)
+  height=randint(10,100)
+  begin_fill()
+  forward(length)
+  right(90)
+  forward(height)
+  right(90)
+  forward(length)
+  right(90)
+  forward(height)
+  right(90)
+  end_fill()
+for i in range(10):
+  drawrectangle()
+clear()
+setheading(0)
